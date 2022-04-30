@@ -1,0 +1,37 @@
+<div class="sub-nav" *ngIf="tabs">
+    <div class="nav-btn d-flex justify-content-center align-items-center" [ngClass]="{'is-condition': !isCondition}"
+        *ngFor="let tab of tabs | keyvalue">
+        <button class="btn" *ngIf="tab.key" [routerLink]="[tab.key || '']" routerLinkActive="active">
+            {{tab?.value}}
+        </button>
+    </div>
+
+    <select name="sports" class="selectbar"
+        *ngIf="(routerUrl =='/') ||(routerUrl =='/dashboard/tomorrow') || (routerUrl =='/dashboard/today') ">
+        <option value="#">Select Sports</option>
+        <option value="#">Cricket</option>
+        <option value="#">Tennis</option>
+    </select>
+
+
+    <div  *ngIf="(routerUrl =='/') ||(routerUrl =='/dashboard/tomorrow') || (routerUrl =='/dashboard/today') ">
+        <a href="#" class="pe-3" mat-raised-button (click)="picker.open()">
+            <img src="../../../assets/images/menu.svg" alt="" />
+        </a>
+        <mat-form-field class="date-picker-input">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <!-- <button >Open</button> -->
+
+    <!-- <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+</div>

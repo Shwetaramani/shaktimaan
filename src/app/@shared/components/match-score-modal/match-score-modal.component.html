@@ -1,0 +1,53 @@
+<div class="modal-header match-score-header d-flex justify-content-center align-items-center">
+  <div class="d-flex justify-content-around align-items-center w-100">
+    <span class="material-icons" (click)="increment()">add</span>
+    <div class="count">{{score.toFixed(2)}}</div>
+    <span class="material-icons" (click)="decrement()">remove</span>
+  </div>
+</div>
+<div class="modal-body match-score-body d-flex flex-column justify-content-center align-items-center">
+  <div class="team-back-btn d-flex justify-content-between align-items-center w-100">
+    <div class="d-flex justify-content-center align-items-center team">
+      <div class="circle">
+        KKR
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center back fw-bold" (click)="onCloseModal()">
+      <!-- <div class="dot me-2"></div> --> Back
+    </div>
+  </div>
+  <div class="counter-style mx-auto text-center">
+    <span class="d-block" >
+      <img class="pt-0 mx-auto" style="height: 35px;" src="../../../assets/images/line45.png" alt="">      
+    </span>
+    <span class="d-block">
+      <img class="scale-img" src="../../../assets/images/scale.png" alt="">      
+    </span>
+    <!-- <p class="score positive mb-0"> 
+      {{count}}
+    </p> -->
+    <input class="score positive count-input" type="number" [(ngModel)]="count">
+    <span >
+      <img class="pb-2 scale-img" src="../../../assets/images/scale2.png" alt="">      
+    </span>
+    <p><span class="me-2">P/L</span> <span class="text-danger">-1345</span></p>
+  </div>
+  <div class="scaler-circle ">
+
+  </div>
+
+  <div class="increment-decrement-btn d-flex justify-content-between align-items-center w-100">
+    <div class="d-flex justify-content-center align-items-center decrement" (click)="decreseCount()">
+      <span class="material-icons">arrow_left</span>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center increment" (click)="increseCount()">
+      <span class="material-icons">arrow_right</span>
+    </div>
+  </div>
+</div>
+<div class="modal-footer match-score-footer">
+  Bet
+</div>

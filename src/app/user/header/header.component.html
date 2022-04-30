@@ -1,0 +1,1057 @@
+<nav class="sm-topnav navbar navbar-expand navbar-dark d-flex justify-content-between align-items-center w-100">
+    <div class="d-flex justify-content-start align-items-center left-menu-panel">
+        <a class="navbar-brand p-0 d-flex justify-content-center">
+            <div class="main-logo d-flex justify-content-center align-items-center" [routerLink]="['/']">
+                <!-- <div>S</div>
+                <div>M</div> -->
+                <div><img src="../../../assets/images/Shaktimaan_favicon.svg" alt="" class="app_logo"></div>
+            </div>
+        </a>
+
+        <div class="input-group d-none d-md-flex flex-column justify-content-center align-items-center search-box">
+            <div class="input-group-prepend d-flex justify-content-center align-items-center">
+                <span class="input-group-text">
+                    <img src="../../../assets/images/search.svg" alt="" srcset="">
+                </span>
+            </div>
+            <input type="text" placeholder="Search Here" class="form-control" />
+        </div>
+
+        <button class="btn btn-link btn-sm toggle-btn d-block d-lg-none" id="sidebarToggle"
+            (click)="toggleSidebar($event)">
+            <img src="../../../assets/images/bar-menu.svg" alt="" srcset="">
+        </button>
+    </div>
+
+    <div class="d-none d-lg-flex justify-content-center align-items-center nav-btns" style="width: 500px;">
+        <owl-carousel-o [options]="carouselSlideOptions" class="owl-carousel-nav-btns">
+            <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    Sports
+                </button>
+            </ng-template>
+
+            <!-- <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/match" routerLinkActive="active">
+                    Match
+                </button>
+            </ng-template> -->
+
+            <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/casino" routerLinkActive="active">
+                    Casino
+                </button>
+            </ng-template>
+
+            <!-- <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/horse-betting" routerLinkActive="active">
+                    Horse Racing
+                </button>
+            </ng-template> -->
+
+            <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/promotion" routerLinkActive="active">
+                    Promotion
+                </button>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/inplay" routerLinkActive="active">
+                    Inplay
+                </button>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <button class="sm-angel-btn" routerLink="/fulltoz" routerLinkActive="active">
+                    Fantasy
+                </button>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+
+    <div class="d-flex justify-content-end align-items-center action-btns right-menu-panel" *ngIf="routerUrl =='/'">
+        <button class="btn btn-link" (click)="openLoginModal()">
+            Log in
+        </button>
+
+        <button class="sm-btn ms-4 me-4" (click)="openSignupModal()">
+            Sign up
+        </button>
+    </div>
+
+    <div class="d-flex justify-content-end align-items-center action-btns" *ngIf="routerUrl !='/'">
+        <button class="sm-btn ms-4 me-4" routerLink="/deposit" routerLinkActive="active">
+            Deposit
+        </button>
+
+        <div class="costs-price">
+            <a href="#"><img src="../../../assets/images/volleyball.svg">50,000 INR</a>
+            <a href="#"><img src="../../../assets/images/tennis.svg">50,000 INR</a>
+        </div>
+
+        <div class="profile-icon">
+            <img src="../../../assets/images/Oval.png" (click)="openSignupModal()">
+        </div>
+    </div>
+
+</nav>
+
+<div id="layoutSidenav" style="overflow-y: hidden;">
+    <div id="layoutSidenav_nav" class="overflow-auto" style="overflow-x: hidden;">
+        <nav class="sm-sidenav accordion sm-sidenav-dark" id="sidenavAccordion">
+            <div class="sm-sidenav-menu">
+                <div class="nav ">
+                    <div
+                        class="d-flex flex-row flex-lg-column d-md-flex d-lg-none justify-content-center align-items-center ms-3 mt-3">
+                        <div class="full-logo d-flex d-lg-none justify-content-center align-items-center me-3"
+                            [routerLink]="['/admin']">
+                            <div>Shakti</div>
+                            <div>maan</div>
+                        </div>
+                        <button class="btn menu-btn d-flex justify-content-center align-items-center"
+                            routerLink="/promotion" routerLinkActive="active" (click)="isoneClickBetActive= false">
+                            <img src="../../../assets/images/percent.svg" alt="" />
+                        </button>
+                        <button class="btn menu-btn d-flex justify-content-center align-items-center"
+                            routerLink="/favorites" routerLinkActive="active" (click)="isoneClickBetActive= false">
+                            <img src="../../../assets/images/star.svg" alt="" />
+                        </button>
+                        <button class="btn menu-btn d-flex justify-content-center align-items-center"
+                            (click)="openBettingModal();isoneClickBetActive= true"
+                            [ngClass]="{'active': isoneClickBetActive == true}">
+                            <img src="../../../assets/images/bet-click.svg" alt="" />
+                        </button>
+                    </div>
+                    <div class=" flex-row d-lg-flex d-none flex-lg-column ps-2 mt-3">
+                        <div class="d-flex my-auto"
+                            (click)="isPromotionActive= !isPromotionActive;isoneClickBetActive= false">
+                            <button class="btn menu-btn d-flex justify-content-center align-items-center"
+                                [ngClass]="{'active': isPromotionActive == true}" routerLink="/promotion"
+                                routerLinkActive="active">
+                                <img src="../../../assets/images/percent.svg" alt="" />
+                            </button>
+                            <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-2 pt-3 mt-1"
+                                routerLink="/promotion" routerLinkActive="active"
+                                [ngClass]="{'active': isPromotionActive == true}">promotion</div>
+                        </div>
+                        <div class="d-flex my-auto"
+                            (click)="isfavoriteActive= !isfavoriteActive; isoneClickBetActive= false">
+
+                            <button class="btn menu-btn d-flex justify-content-center align-items-center"
+                                [ngClass]="{'active': isfavoriteActive == true}" routerLink="/favorites"
+                                routerLinkActive="active">
+                                <img src="../../../assets/images/star.svg" alt="" />
+                            </button>
+                            <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-2 pt-3 mt-1"
+                                [ngClass]="{'active': isfavoriteActive == true}" routerLink="/favorites"
+                                routerLinkActive="active">Favorites</div>
+                        </div>
+                        <div class="d-flex my-auto" (click)="openBettingModal();isoneClickBetActive= true">
+
+                            <button class="btn menu-btn d-flex justify-content-center align-items-center"
+                                [ngClass]="{'active': isoneClickBetActive == true}">
+                                <img src="../../../assets/images/bet-click.svg" alt="" />
+                            </button>
+                            <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-2 pt-3 mt-1"
+                                [ngClass]="{'active': isoneClickBetActive == true}">One Click
+                                Bet</div>
+                        </div>
+                    </div>
+                    <!-- <mat-accordion class="ps-2 ms-1">
+                        <mat-expansion-panel  (opened)="panelOpenState = 'cricket'" style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+                                            <button (click)="expand_Sidebar()"
+                                                class="btn menu-btn d-flex justify-content-center align-items-center">
+                                                <img src="../../../assets/images/bet-click.svg" alt="" />
+                                            </button>
+                                            <div class="d-inline-block  sidebar-title ps-4 pt-lg-3 pt-2 mt-1">
+                                                Betting</div>
+                                        </div>
+                                       
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p>Test Matches</p>
+                            <p>ABU DHABI T20</p>
+                            <p>world cup t20 2021</p>
+                            <p>SUPER SMASH t20</p>
+                        </mat-expansion-panel>
+
+                    </mat-accordion> -->
+
+
+
+                    <mat-accordion class="ps-2 pt-1 d-none d-lg-block" *ngIf="routerUrl != '/casino/all'"
+                        #accordion="matAccordion">
+                        <mat-expansion-panel class="mb-1" (opened)="panelOpenState1 = true"
+                            (closed)="panelOpenState1 = false" [expanded]="allExpandState1"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState1 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/batball.svg" alt="" />
+
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState1 == true}">
+                                                    Cricket
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <div class="custom-menus-height">
+                                <div class="title">Cricket</div>
+
+                                <div class="menus">
+                                    <div class="sub-title">Test Matches</div>
+                                    <div class="list">
+                                        <p>ABU DHABI T20</p>
+                                        <p>ICC world cup</p>
+                                        <p>SUPER SMASH</p>
+                                    </div>
+                                </div>
+
+                                <div class="menus">
+                                    <div class="sub-title">IPL 2021</div>
+                                    <div class="list">
+                                        <p>ABU DHABI T20</p>
+                                        <p>ICC world cup</p>
+                                        <p>SUPER SMASH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState2 = true"
+                            (closed)="panelOpenState2 = false" [expanded]="allExpandState2"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState2 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/volleyball.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState2 == true}">
+                                                    Football
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Football</div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState3 = true"
+                            (closed)="panelOpenState3 = false" [expanded]="allExpandState3"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState3 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/tennis.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState3 == true}">
+                                                    Lawn Tennis
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Lawn Tennis</div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" id="mat-accr" (opened)="panelOpenState4 = true"
+                            (closed)="panelOpenState4 = false" [expanded]="allExpandState4"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState4 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/tt.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState4 == true}">
+                                                    Table Tennis
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Table Tennis</div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState5 = true"
+                            (closed)="panelOpenState5 = false" [expanded]="allExpandState5"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState5 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/boxing.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState5 == true}">
+                                                    Boxing</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Boxing</div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState6 = true"
+                            (closed)="panelOpenState6 = false" [expanded]="allExpandState6"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState6 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/cart.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState6 == true}">
+                                                    Hockey</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Hockey</div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState7 = true"
+                            (closed)="panelOpenState7 = false" [expanded]="allExpandState7"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()" routerLink="/horse-betting">
+
+                                                <div [ngClass]="{'active': panelOpenState7 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/dog.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState7 == true}">
+                                                    Horse</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Horse</div>
+                            </div>
+                        </mat-expansion-panel>
+
+                        <!-- <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState = true"  [expanded]="allExpandState"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState1 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/cart.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Hockey</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Hockey</div>
+                            </div>
+                        </mat-expansion-panel> -->
+
+                    </mat-accordion>
+
+
+                    <mat-accordion class="ps-2 pt-1 d-none d-lg-block" #accordion="matAccordion"
+                        *ngIf=" routerUrl == '/casino/all'">
+                        <mat-expansion-panel class="mb-1" hideToggle (opened)="panelOpenState1 = true"
+                            (closed)="panelOpenState1 = false" [expanded]="allExpandState1"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState1 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/super_spade.svg" alt="" />
+
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState1 == true}">
+                                                    Super Spade
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" hideToggle (opened)="panelOpenState2 = true"
+                            (closed)="panelOpenState2 = false" [expanded]="allExpandState2"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState2 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/evolution.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState2 == true}">
+                                                    Evolution
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!-- <div class="custom-menus-height">
+                                <div class="title">Football</div>
+                            </div> -->
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" hideToggle (opened)="panelOpenState3 = true"
+                            (closed)="panelOpenState3 = false" [expanded]="allExpandState3"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState3 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/ezugi.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState3 == true}">
+                                                    Ezugi
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!-- <div class="custom-menus-height">
+                                <div class="title">Lawn Tennis</div>
+                            </div> -->
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" hideToggle id="mat-accr"
+                            (opened)="panelOpenState4 = true" (closed)="panelOpenState4 = false"
+                            [expanded]="allExpandState4" style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState4 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/binary.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState4 == true}">
+                                                    Binary
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!-- <div class="custom-menus-height">
+                                <div class="title">Table Tennis</div>
+                            </div> -->
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" hideToggle (opened)="panelOpenState5 = true"
+                            (closed)="panelOpenState5 = false" [expanded]="allExpandState5"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState5 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/one-touch.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState5 == true}">
+                                                    OneTouch
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!-- <div class="custom-menus-height">
+                                <div class="title">Boxing</div>
+                            </div> -->
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" hideToggle (opened)="panelOpenState6 = true"
+                            (closed)="panelOpenState6 = false" [expanded]="allExpandState6"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState6 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/tvbet.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState6 == true}">
+                                                    TVBET</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!-- <div class="custom-menus-height">
+                                <div class="title">Hockey</div>
+                            </div> -->
+                        </mat-expansion-panel>
+
+                        <mat-expansion-panel class="my-2 pt-1" hideToggle (opened)="panelOpenState7 = true"
+                            (closed)="panelOpenState7 = false" [expanded]="allExpandState7"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState7 == true}"
+                                                    class="img-container ms-2 d-flex casino-icon justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/tvbet.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title invisible ps-3"
+                                                    [ngClass]="{'active': panelOpenState7 == true}">
+                                                    TVBET</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!-- <div class="custom-menus-height">
+                                <div class="title">Dog</div>
+                            </div> -->
+                        </mat-expansion-panel>
+
+                        <!-- <mat-expansion-panel class="my-2 pt-1" (opened)="panelOpenState = true"  [expanded]="allExpandState"
+                            style="background-color: transparent !important;">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <li>
+                                        <div class="d-flex">
+
+                                            <div class="custom-header d-flex justify-content-center align-items-center"
+                                                (click)="expand_Sidebar()">
+
+                                                <div [ngClass]="{'active': panelOpenState1 == true}"
+                                                    class="img-container ms-2 d-flex justify-content-center align-items-center">
+                                                    <img src="../../../assets/images/cart.svg" alt="" />
+                                                </div>
+                                                <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Hockey</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div class="custom-menus-height">
+                                <div class="title">Hockey</div>
+                            </div>
+                        </mat-expansion-panel> -->
+
+                    </mat-accordion>
+
+                    <ngb-accordion #acc="ngbAccordion" *ngIf="routerUrl != '/casino/all'"
+                        class="menu-accordion d-block d-lg-none" [closeOthers]="true">
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle routerLink="/cricket"
+                                    routerLinkActive="active">
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/batball.svg" alt="" />
+
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Cricket</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Cricket</div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Cricket</div>
+
+                                    <div class="menus">
+                                        <div class="sub-title">Test Matches</div>
+                                        <div class="list">
+                                            <p>ABU DHABI T20</p>
+                                            <p>ICC world cup</p>
+                                            <p>SUPER SMASH</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="menus">
+                                        <div class="sub-title">IPL 2021</div>
+                                        <div class="list">
+                                            <p>ABU DHABI T20</p>
+                                            <p>ICC world cup</p>
+                                            <p>SUPER SMASH</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/volleyball.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Football</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Football</div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Football</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/tennis.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Lawn Tennis</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Lawn Tennis
+                                    </div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Lawn Tennis</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/tt.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Table Tennis</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Table Tennis
+                                    </div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Table Tennis</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/boxing.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Boxing</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Boxing</div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Boxing</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/cart.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Hockey</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Hockey</div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Hockey</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar() " routerLink="/horse-betting" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/dog.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Dog</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Horse</div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Horse</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar()" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/cart.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Hockey</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': opened }">Hockey</div>
+
+                                    <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Hockey</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion>
+
+
+                    <ngb-accordion #acc="ngbAccordion" *ngIf="routerUrl == '/casino/all'"
+                        class="menu-accordion d-block d-lg-none" [closeOthers]="true">
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar();panelOpenState2= true" routerLink="/cricket"
+                                    routerLinkActive="active">
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': panelOpenState2 }">
+                                        <img src="../../../assets/images/super_spade.svg" alt="" />
+
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Cricket</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': panelOpenState2 }">Super
+                                        Spade</div>
+
+                                    <!-- <div class="d-flex d-lg-none justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div> -->
+                                </button>
+                            </ng-template>
+
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar();panelOpenState3= true">
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': panelOpenState3 }">
+                                        <img src="../../../assets/images/evolution.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Football</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': panelOpenState3 }">
+                                        Evolution</div>
+
+                                </button>
+                            </ng-template>
+
+
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar();panelOpenState4= true">
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': panelOpenState4 }">
+                                        <img src="../../../assets/images/ezugi.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Lawn Tennis</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': panelOpenState4 }">Ezugi
+                                    </div>
+
+                                </button>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar();panelOpenState5 =true">
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': panelOpenState5 }">
+                                        <img src="../../../assets/images/binary.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Table Tennis</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': panelOpenState5 }">Binary
+                                    </div>
+
+
+                                </button>
+                            </ng-template>
+
+
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar();panelOpenState6= true">
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': panelOpenState6 }">
+                                        <img src="../../../assets/images/one-touch.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Boxing</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': panelOpenState6 }">
+                                        OneTouch</div>
+
+
+                                </button>
+                            </ng-template>
+
+
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                    (click)="expandSidebar();panelOpenState7= true" ngbPanelToggle>
+                                    <div class="img-container d-flex justify-content-center align-items-center"
+                                        [ngClass]="{'active': panelOpenState7 }">
+                                        <img src="../../../assets/images/tvbet.svg" alt="" />
+                                    </div>
+                                    <!-- <div class="d-lg-inline-block d-md-none sidebar-title ps-3">Hockey</div> -->
+
+                                    <div class="d-block d-lg-none title" [ngClass]="{'active': panelOpenState7 }">TVBET
+                                    </div>
+
+                                </button>
+                            </ng-template>
+
+                        </ngb-panel>
+                    </ngb-accordion>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="layoutSidenav_content" (click)="closeSidebar($event)">
+        <main class="px-0 px-md-2">
+            <router-outlet></router-outlet>
+            <!-- <app-dashboard></app-dashboard> -->
+        </main>
+    </div>
+</div>

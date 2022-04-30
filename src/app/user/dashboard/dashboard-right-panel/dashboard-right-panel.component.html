@@ -1,0 +1,204 @@
+<div class="dashboard-right-panel-container">
+    <div class="box">
+        <div class="tab-wrapper">
+            <div class="tab-header d-flex justify-content-center align-items-center"
+                [ngStyle]="Betslips?{'color': '#23B054'} : {'color': '#418157'}"
+                (click)="Betslips = true;Promotions = false; Cashout = false;">Betslips
+            </div>
+            <div class="tab-header d-flex justify-content-center align-items-center"
+                [ngStyle]="Cashout?{'color': '#23B054'} : {'color': '#418157'}"
+                (click)="Cashout = true; Betslips = false ;Promotions = false">Cashout
+            </div>
+            <div class="tab-header d-flex justify-content-center align-items-center"
+                [ngStyle]="Promotions?{'color': '#23B054'} : {'color': '#418157'}"
+                (click)="Promotions = true; Cashout = false; Betslips = false">
+                Promotions</div>
+        </div>
+        <div *ngIf="Betslips">
+            <div class="title">Your betslip is empty!!</div>
+            <p>Click on odds to add a bet to your betslip</p>
+        </div>
+        <div *ngIf="Cashout" class="cashout-text">
+            <!-- <div class="title">Your are on cachout tab!!</div> -->
+            <!-- <p>Click on odds to add a bet to your betslip</p> -->
+            <p>
+                Cash Out is our Real-Time feature that gives you control whether its a Single Bet or Multiple Bet. You
+                can take your money and start right away with just a click.
+            </p>
+            <p>
+                Search for the Cash Out Icon on placing a bet. Here you can see the current Cash Out out worth of your
+                bet. Assuming that there is a Turning Point while in-play, our chances and markets will be briefly
+                suspended. You can decide to Cash Out the entire bet instantly. While what survives from the stake runs
+                for the remainder of the bet. You can do this however many times as you need by setting the sum you need
+                to Cash Out. So pick the perfect opportunity to Cash Out and get the best worth.
+            </p>
+        </div>
+        <div *ngIf="Promotions" class="m-4">
+            <img src="../../../../assets/images/Shaktimaan Promotion.png" alt="" />
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="tab-wrapper">
+            <div class="tab-header d-flex justify-content-center align-items-center"
+                [ngStyle]="provider?{'color': '#23B054'} : {'color': '#418157'}"
+                (click)="provider = true;virtual_game = false; live_game = false;">Provider</div>
+            <div class="tab-header d-flex justify-content-center align-items-center"
+                [ngStyle]="live_game?{'color': '#23B054'} : {'color': '#418157'}"
+                (click)="live_game = true; provider = false ;virtual_game = false">Live Games</div>
+            <div class="tab-header d-flex justify-content-center align-items-center"
+                [ngStyle]="virtual_game?{'color': '#23B054'} : {'color': '#418157'}"
+                (click)="virtual_game = true; live_game = false; provider = false">Virtual Games</div>
+        </div>
+
+        <div *ngIf="provider" class="d-flex flex-wrap justify-content-between align-items-center cards w-100">
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+        </div>
+
+        <div *ngIf="live_game" class="d-flex flex-wrap justify-content-between align-items-center cards w-100">
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+        </div>
+
+        <div *ngIf="virtual_game" class="d-flex flex-wrap justify-content-between align-items-center cards w-100">
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+            <div class="card d-flex justify-content-center align-items-center">
+                <div class="card-radius-top"></div>
+                <div class="card-radius-center"></div>
+                <div class="card-radius-bottom"></div>
+                <img src="../../../assets/images/ezugi.png" alt="" />
+            </div>
+
+
+        </div>
+    </div>
+</div>

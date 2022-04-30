@@ -1,0 +1,297 @@
+<div class="modal-body scooped-corners">
+    <div class="inner-body inner-scooped-corners">
+        <div class="header">
+            <div class="heder-bg">
+                <h4>Matches</h4>
+            </div>
+        </div>
+        <div class="content custom-modal-content">
+            <div class="row align-items-center modal_wrapper">
+                <div class="col-12">
+                    <h5 class="title mb-3 heading-txt">Boxing</h5>
+                    <hr>
+                    <!-- ---------------------------------- -->
+                    <mat-accordion>
+                        <mat-expansion-panel class="custom-accordian-panel">
+                            <mat-expansion-panel-header class="custom-accordian-header">
+                                <div class="d-flex justify-content-between w-100">
+                                    <span class="fw-bold">
+                                        Ekow Essuman vs Denny Ball 5656
+                                    </span>
+            
+                                    <div class="d-flex justify-content-end ">
+                                        <div class="d-flex">
+                                            <span class="material-icons">add_circle_outline</span>
+                                            <!-- <span class="all-btn-txt ps-2">All</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-expansion-panel-header>
+                            <div class="d-flex py-2 justify-content-between custom-accordian-body" (click)="closeAndAddMachesModal()">
+                                <span>testing </span><span class="material-icons" (click)="closeAndAddMachesModal()">add</span>
+                            </div>
+                            <div class="d-flex py-2 justify-content-between custom-accordian-body">
+                                <span>testing </span><span class="material-icons" (click)="closeAndAddMachesModal()">add</span>
+                            </div>
+                            <div class="d-flex py-2 justify-content-between custom-accordian-body">
+                                <span>testing </span><span class="material-icons" (click)="closeAndAddMachesModal()">add</span>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <!-- -------------------------- -->
+                    <hr>
+
+                    <h5 class="title mb-3 heading-txt">Cycling</h5>
+                    <hr>
+                    <!-- ---------------------------------- -->
+                    <mat-accordion>
+                        <mat-expansion-panel class="custom-accordian-panel">
+                            <mat-expansion-panel-header class="custom-accordian-header">
+                                <div class="d-flex justify-content-between w-100">
+                                    <span class="fw-bold">
+                                        Ekow Essuman vs Denny Ball 5656
+                                    </span>
+            
+                                    <div class="d-flex justify-content-end ">
+                                        <div class="d-flex">
+                                            <span class="material-icons">add_circle_outline</span>
+                                            <!-- <span class="all-btn-txt ps-2">All</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-expansion-panel-header>
+                            <div class="d-flex py-2 justify-content-between custom-accordian-body">
+                                <span>testing </span><span class="material-icons" (click)="closeAndAddMachesModal()" >add</span>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <!-- -------------------------- -->
+                    <hr>
+
+                    <h5 class="title mb-3 heading-txt">Cricket</h5>
+                    <hr>
+                    <!-- ---------------------------------- -->
+                    <mat-accordion>
+                        <mat-expansion-panel class="custom-accordian-panel">
+                            <mat-expansion-panel-header class="custom-accordian-header">
+                                <div class="d-flex justify-content-between w-100">
+                                    <span class="fw-bold">
+                                        Ekow Essuman vs Denny Ball 5656
+                                    </span>
+            
+                                    <div class="d-flex justify-content-end ">
+                                        <div class="d-flex">
+                                            <span class="material-icons">add_circle_outline</span>
+                                            <!-- <span class="all-btn-txt ps-2">All</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-expansion-panel-header>
+                            <div class="d-flex py-2 justify-content-between custom-accordian-body">
+                                <span>testing </span><span class="material-icons" (click)="closeAndAddMachesModal()">add</span>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                    <!-- -------------------------- -->
+                    <hr>
+
+                   <!--  <ngb-accordion #acc="ngbAccordion"
+                        class="menu-accordion d-block " [closeOthers]="true">
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle routerLink="/cricket"
+                                    routerLinkActive="active">
+                                    <div class="d-block title">Cricket</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Cricket</div>
+
+                                    <div class="menus">
+                                        <div class="sub-title">Test Matches</div>
+                                        <div class="list">
+                                            <p>ABU DHABI T20</p>
+                                            <p>ICC world cup</p>
+                                            <p>SUPER SMASH</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="menus">
+                                        <div class="sub-title">IPL 2021</div>
+                                        <div class="list">
+                                            <p>ABU DHABI T20</p>
+                                            <p>ICC world cup</p>
+                                            <p>SUPER SMASH</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Football</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Football</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Lawn Tennis</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Lawn Tennis</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Table Tennis</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Table Tennis</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Boxing</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Boxing</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Hockey</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Hockey</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Dog</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Dog</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+
+                        <ngb-panel>
+                            <ng-template ngbPanelHeader let-opened="opened">
+                                <button
+                                    class="accordion-button custom-header d-flex justify-content-center align-items-center"
+                                     ngbPanelToggle>
+                                    <div class="d-block title">Hockey</div>
+
+                                    <div class="d-flex justify-content-center align-items-center toggle-btn"
+                                        [ngClass]="{'active': opened }">
+                                        <img src="../../../assets/images/close.svg" alt="" srcset="">
+                                    </div>
+                                </button>
+                            </ng-template>
+
+                            <ng-template ngbPanelContent>
+                                <div class="custom-menus-height">
+                                    <div class="title">Hockey</div>
+                                </div>
+                            </ng-template>
+                        </ngb-panel>
+                    </ngb-accordion> -->
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn dark-btn" (click)="activeModal.dismiss()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

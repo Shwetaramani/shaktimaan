@@ -1,0 +1,172 @@
+<div class="dashboard d-flex w-100">
+    <div class="left-panel">
+        <div class="carousel-and-actions">
+            <app-main-container-carousel [slides]="slides"></app-main-container-carousel>
+        </div>
+
+        <app-sub-nav [tabs]="subNavTabs" [isCondition]="false"></app-sub-nav>
+
+        <div class="d-flex justify-content-center flex-wrap mt-2 pb-5">
+            <!-- <div class="popup-container">
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="inner-popup"></div>
+                        <h2 class="cb-date">Apply Code</h2>
+                    </div>
+                    <div class="popup-1-radius"></div>
+                    <div class="popup-2-radius"></div>
+                    <div class="popup-3-radius"></div>
+                    <div class="popup-4-radius"></div>
+                    <div class="popup-5-radius"></div>
+                    <div class="popup-6-radius"></div>
+                    <div class="inner-content">
+                        <h1>SCND CSNO Bonus</h1>
+                        <h3 class="mb-0">Claim Until : 31 December</h3>
+                        <div class="btn-box">
+                            <button (click)="showRules()">Terms & Condition</button>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>5% of your bonus amount can be claimed per bet.</p>
+                            </li>
+                            <li>
+                                <p>Maximum 100 bonus amount can be claimed per bet.</p>
+                            </li>
+                            <li>
+                                <p>Members are not permitted to hold multiple accounts. This includes holding an account
+                                    with any associated site operating on the same platform as this site.</p>
+                            </li>
+                            <li>
+                                <p>Every bonus has an expiry date, claim it before you loose it.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-container two">
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="inner-popup"></div>
+                        <h2 class="cb-date">Apply Code</h2>
+                    </div>
+                    <div class="popup-1-radius"></div>
+                    <div class="popup-2-radius"></div>
+                    <div class="popup-3-radius"></div>
+                    <div class="popup-4-radius"></div>
+                    <div class="popup-5-radius"></div>
+                    <div class="popup-6-radius"></div>
+                    <div class="inner-content">
+                        <h1>SCND CSNO Bonus</h1>
+                        <h3 class="mb-0">Claim Until : 31 December</h3>
+                        <div class="btn-box">
+                            <button (click)="showRules()">Terms & Condition</button>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>5% of your bonus amount can be claimed per bet.</p>
+                            </li>
+                            <li>
+                                <p>Maximum 100 bonus amount can be claimed per bet.</p>
+                            </li>
+                            <li>
+                                <p>Members are not permitted to hold multiple accounts. This includes holding an account
+                                    with any associated site operating on the same platform as this site.</p>
+                            </li>
+                            <li>
+                                <p>Every bonus has an expiry date, claim it before you loose it.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-container three">
+                <div class="popup-content">
+                    <div class="popup-header">
+                        <div class="inner-popup"></div>
+                        <h2 class="cb-date">Apply Code</h2>
+                    </div>
+                    <div class="popup-1-radius"></div>
+                    <div class="popup-2-radius"></div>
+                    <div class="popup-3-radius"></div>
+                    <div class="popup-4-radius"></div>
+                    <div class="popup-5-radius"></div>
+                    <div class="popup-6-radius"></div>
+                    <div class="inner-content">
+                        <h1>SCND CSNO Bonus</h1>
+                        <h3 class="mb-0">Claim Until : 31 December</h3>
+                        <div class="btn-box">
+                            <button (click)="showRules()">Terms & Condition</button>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>5% of your bonus amount can be claimed per bet.</p>
+                            </li>
+                            <li>
+                                <p>Maximum 100 bonus amount can be claimed per bet.</p>
+                            </li>
+                            <li>
+                                <p>Members are not permitted to hold multiple accounts. This includes holding an account
+                                    with any associated site operating on the same platform as this site.</p>
+                            </li>
+                            <li>
+                                <p>Every bonus has an expiry date, claim it before you loose it.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row w-100 px-2 px-lg-5 py-4 m-0">
+                <div class="col-12 col-md-5 px-4">
+                    <div class="sub-nav my-3 w-90 mx-auto">
+                        <div class="gray-txt">Enter amount for deposit</div>
+                        <input class="score green-txt count-input" [(ngModel)]="amount" type="text">
+
+                    </div>
+                    <div class="sub-nav my-3 w-90 mx-auto">
+                        <div class="gray-txt">Enter your promo code</div>
+                        <input class="score green-txt count-input" [(ngModel)]="promocode" type="text">
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-4 px-4">
+                    <div class="my-3 mx-auto d-flex" style="flex-flow: wrap;">
+                        <div class="sm-angel-btn price-btn">₹500</div>
+                        <div class="sm-angel-btn price-btn">₹5,000</div>
+                        <div class="sm-angel-btn price-btn">₹10,000</div>
+                        <div class="sm-angel-btn price-btn">₹20,000</div>
+                        <div class="sm-angel-btn price-btn">₹1,00,000</div>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-6 col-12 px-5 py-5">
+                    <div class="gray-txt pb-5">Need help? Please check the <span class="green-txt">how to deposit
+                            guide</span> or <span class="green-txt">contact us</span> on live chat / email now.</div>
+                    <div class="gray-txt pb-3">We accept, process & disburse digital payments for your business
+                        <span class="green-txt"> Fast & Secure Payment</span>
+                    </div>
+                    <div class="payment-opction mt-3">
+                        <div><img src="assets/images/visa-logo.png"></div>
+                        <div><img src="assets/images/Mastercard.png"></div>
+                        <div><img src="assets/images/Skrill.png"></div>
+                        <div><img src="assets/images/Bitcoin.png"></div>
+                        <div><img src="assets/images/Vector (2).png"></div>
+                        <div><img src="assets/images/Vector (3).png"></div>
+                        <div><img src="assets/images/Vector (4).png"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 my-2 d-flex" style="height: fit-content;">
+                    <div class="btn-wrapper w-90">
+                        <button class="sm-angel-btn me-2">Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <app-footer></app-footer> -->
+    </div>
+    <div class="right-panel d-none d-md-block">
+        <app-match-right-panel></app-match-right-panel>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+
+::ng-deep .modal-body ::-webkit-scrollbar {
+    margin-right: 20px !important;
+    width: 4px !important;
+    overflow-y: scroll !important;
+    background: #636262 !important;
+    box-shadow: inset 0 0 4px !important;
+}
+
+::ng-deep .modal-body ::-webkit-scrollbar-thumb {
+    margin-right: 20px !important;
+    background: #0A7418 !important;
+    border-radius: 10px !important;
+}

@@ -1,0 +1,540 @@
+// @import url(../../user/match/match.component.scss);
+
+:host {
+    display: flex;
+    // width: 100%;
+    height: 100%;
+    // flex: 1;
+    flex-direction: column;
+    width: -webkit-fill-available;
+}
+
+.cricket-card {
+    position: relative;
+    // width: max-content;
+    max-width: 100%;
+    width: 100%;
+    // height: min(max(170px, 15vw), 210px);
+    background: rgba(62, 65, 75, 0.2);
+    backdrop-filter: blur(80px);
+    border-radius: 18px;
+    margin: 18px 0px 0px 0px;
+    .card-header {
+        position: absolute;
+        min-width: min(max(60px, 3vw), 75px);
+        height: 100%;
+        border-right: 2px dashed #000;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 30px;
+            left: calc(min(max(60px, 3vw), 75px) - 15px);
+            background: #191c22;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        &::before {
+            top: -15px;
+        }
+        &::after {
+            bottom: -15px;
+        }
+        .header {
+            position: absolute;
+            left: -45px;
+            color: white;
+            width: 105px;
+            height: 28px;
+            z-index: 1;
+            border-bottom-right-radius: 65px;
+            border-bottom-left-radius: 65px;
+            text-align: center;
+            background: linear-gradient(180deg, #3e119e -19.7%, #35127d 125.76%);
+            box-shadow: 7.51117e-16px 1px 5px #180c40, inset -3.50521e-16px -5.72444px 5.72444px #281694,
+                inset 3.50521e-16px 5.72444px 5.72444px #574cd2;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 28px;
+            text-transform: capitalize;
+            color: #bdd1c4;
+            transform: rotate(-90deg);
+        }
+        .close-icon {
+            //colos
+            position: fixed;
+            width: min(max(9px, 1vw), 16px);
+            height: min(max(9px, 1vw), 16px);
+            top: 20px;
+            left: 16px;
+            border: 1.28px solid #666666;
+            border-radius: 50%;
+            font-size: min(max(5px, 1vw), 10px);
+            text-align: center;
+            cursor: pointer;
+            z-index: 9;
+        }
+        .details {
+            position: absolute;
+            right: calc((min(max(30px, 3vw), 41px) / 2) * -1);
+            width: min(max(30px, 3vw), 41px);
+            background: #1e2427;
+            box-shadow: 1.15217px -1.15217px 2.30435px rgba(14, 18, 20, 0.2),
+                -1.15217px -1.15217px 2.30435px rgba(50, 62, 68, 0.9),
+                1.15217px 1.15217px 3.45652px rgba(14, 18, 20, 0.9);
+            border-radius: 3.45652px;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: -0.01em;
+            text-transform: capitalize;
+            color: #656768;
+            padding: 4px;
+            @media (max-width: 575px) {
+                top: auto;
+            }
+            .description {
+                font-weight: 500;
+                font-size: min(max(5px, 1vw), 9px);
+                text-transform: capitalize;
+                color: #bdd1c4;
+            }
+            .rate {
+                font-weight: 600;
+                font-size: min(max(8px, 1vw), 12px);
+                text-transform: capitalize;
+                color: #cf2121;
+            }
+            .rate-green {
+                font-weight: 600;
+                font-size: min(max(5px, 1vw), 9px);
+                text-transform: capitalize;
+                color: #1d8a43;
+                margin-top: min(max(2px, 1vw), 6px);
+            }
+        }
+        @media (max-width: 575px) {
+            .close-icon {
+                top: 8px;
+                left: 26px;
+            }
+            .card-action-icons {
+                position: absolute;
+                height: 100%;
+                .is-live {
+                    position: relative;
+                    right: calc((min(max(60px, 3vw), 75px) - 29px) * -1);
+                    top: 15%;
+                    bottom: 7px;
+                }
+                .actions {
+                    .material-icons {
+                        &.info,
+                        &.bookmark,
+                        &.star {
+                            position: absolute;
+                            left: 12px;
+                            margin: 0px;
+                        }
+                        &.info {
+                            top: 23px;
+                        }
+                        &.bookmark {
+                            bottom: 23px;
+                        }
+                        &.star {
+                            bottom: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .card-details {
+        position: relative;
+        height: 100%;
+        // padding: 10px 0px 10px min(max(24px, 2vw), 10px);
+        padding: 10px 0px 10px min(max(24px, 2vw), 20px);
+        //padding: 18px 12px 18px min(max(24px, 2vw), 32px);
+        overflow: hidden;
+        margin-left: 48px;
+        .teams {
+            height: 100%;
+            flex: none;
+            .team {
+                position: relative;
+                .vs {
+                    position: relative;
+                    width: min(max(22px, 3vw), 50px);
+                    height: min(max(22px, 3vw), 50px);
+                    font-weight: 600;
+                }
+                .team-title {
+                    display: flex;
+                    justify-content: left;
+                    // width: 160px;
+                    min-width: 220px;
+                }
+                .combine-name {
+                    min-width: 265px !important;
+                }
+                @media screen and (max-width: 820px) {
+                    .team-title {
+                        min-width: 162px !important;
+                        // width: 162px !important;
+                    }
+                    .combine-name {
+                        min-width: 162px !important;
+                        // width: 162px !important;
+                    }
+                }
+                .circle {
+                    background: linear-gradient(135deg, #1c2027 0%, #1e242b 100%);
+                    box-shadow: -1px 1px 2px rgba(12, 14, 16, 0.2), 1px -1px 2px rgba(12, 14, 16, 0.2),
+                        -1px -1px 2px rgba(46, 54, 66, 0.9), 1px 1px 3px rgba(12, 14, 16, 0.9),
+                        inset 1px 1px 2px rgba(46, 54, 66, 0.3), inset -1px -1px 2px rgba(12, 14, 16, 0.5);
+                    width: min(max(22px, 3vw), 50px);
+                    height: min(max(22px, 3vw), 50px);
+                    min-width: min(max(22px, 3vw), 50px);
+                    min-height: min(max(22px, 3vw), 50px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    font-weight: 600;
+                    &.team-1,
+                    &.team-2 {
+                        width: min(max(16px, 2vw), 34px);
+                        height: min(max(16px, 2vw), 34px);
+                        min-width: min(max(16px, 2vw), 34px);
+                        min-height: min(max(16px, 2vw), 34px);
+                    }
+                    &.team-2 {
+                        position: absolute;
+                        // left: min(max(12px, 1vw), 22px);
+                        left: min(max(12px, 3vw), 30px);
+                    }
+                    @media screen and (max-width: 820px) {
+                        &.team-2 {
+                            position: absolute;
+                            // left: min(max(12px, 1vw), 22px);
+                            left: min(max(12px, 10vw), 30px);
+                        }
+                    }
+                    img {
+                        width: 50%;
+                    }
+                }
+                .name {
+                    font-weight: 600;
+                    font-size: min(max(10px, 1vw), 14px);
+                    text-transform: capitalize;
+                    color: #bdd1c4;
+                }
+                .c-name {
+                    padding-left: 35px !important;
+                }
+                @media screen and (max-width: 768px) {
+                    .c-name {
+                        padding-left: 0px !important;
+                    }
+                }
+                .score {
+                    font-weight: 600;
+                    font-size: min(max(10px, 1vw), 14px);
+                    text-transform: capitalize;
+                    &.positive {
+                        color: #22b455;
+                    }
+                    &.negative {
+                        color: #cf2121;
+                    }
+                }
+            }
+        }
+        .action-btns {
+            position: relative;
+            height: 100%;
+            margin: 0px 0px 0px 12px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            overflow-x: auto;
+            scrollbar-color: #000 transparent;
+            scrollbar-width: thin;
+            &::-webkit-scrollbar {
+                width: 2px;
+                height: 2px;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px transparent;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #000;
+                border-radius: 10px;
+                &:hover {
+                    background: #000;
+                }
+            }
+            .match-suspended {
+                position: absolute;
+                width: 100%;
+                height: 51px;
+                top: -4px;
+                background: rgba(61, 63, 68, 0.122);
+                backdrop-filter: blur(11px);
+                border-radius: 9px;
+                font-weight: 600;
+                font-size: min(max(14px, 1vw), 20px);
+                line-height: 26px;
+                text-transform: capitalize;
+                color: #0bc44b;
+                padding: min(8px, 3vw, 12px);
+            }
+            .bid {
+                .green-btn,
+                .pink-btn {
+                    width: min(max(38px, 4.2vw), 74px);
+                    height: min(max(32px, 3.2vw), 48px);
+                }
+                .green-btn {
+                    background: #1d2a1f;
+                    box-shadow: -1.36101px 1.36101px 2.72203px rgba(23, 6, 36, 0.2),
+                        1.36101px -1.36101px 2.72203px rgba(23, 130, 60, 0.2),
+                        1.36101px 1.36101px 4.08304px rgba(23, 6, 36, 0.5),
+                        inset 1.36101px 1.36101px 2.72203px rgba(35, 176, 84, 0.3),
+                        inset -1.36101px -1.36101px 2.72203px rgba(23, 6, 36, 0.5);
+                    &.active {
+                        background: #1d2a1f;
+                        box-shadow: 1.25333px 1.25333px 2.50667px rgba(46, 67, 50, 0.3),
+                            -1.25333px -1.25333px 2.50667px rgba(12, 17, 12, 0.5),
+                            inset -1.25333px 1.25333px 2.50667px rgba(12, 17, 12, 0.2),
+                            inset 1.25333px -1.25333px 2.50667px rgba(12, 17, 12, 0.2),
+                            inset -1.25333px -1.25333px 2.50667px rgba(46, 67, 50, 0.9),
+                            inset 1.25333px 1.25333px 3.76px rgba(12, 17, 12, 0.9);
+                    }
+                }
+                .pink-btn {
+                    background: #390e5a;
+                    box-shadow: -1.37931px 1.37931px 2.75862px rgba(23, 6, 36, 0.2),
+                        1.37931px -1.37931px 2.75862px rgba(23, 6, 36, 0.2),
+                        -1.37931px -1.37931px 2.75862px rgba(91, 22, 144, 0.9),
+                        1.37931px 1.37931px 4.13793px rgba(23, 6, 36, 0.9),
+                        inset 1.37931px 1.37931px 2.75862px rgba(91, 22, 144, 0.3),
+                        inset -1.37931px -1.37931px 2.75862px rgba(23, 6, 36, 0.5);
+                    &.active {
+                        background: #390e5b;
+                        box-shadow: 1.25333px 1.25333px 2.50667px rgba(91, 22, 146, 0.3),
+                            -1.25333px -1.25333px 2.50667px rgba(23, 6, 36, 0.5),
+                            inset -1.25333px 1.25333px 2.50667px rgba(23, 6, 36, 0.2),
+                            inset 1.25333px -1.25333px 2.50667px rgba(23, 6, 36, 0.2),
+                            inset -1.25333px -1.25333px 2.50667px rgba(91, 22, 146, 0.9),
+                            inset 1.25333px 1.25333px 3.76px rgba(23, 6, 36, 0.9);
+                    }
+                }
+            }
+            .green-btn,
+            .pink-btn {
+                width: min(max(32px, 4vw), 67px);
+                height: min(max(28px, 3vw), 43px);
+                font-weight: 400;
+                border-radius: 2px;
+                margin: 0px 5px 0px 5px;
+                cursor: pointer;
+                .score {
+                    font-weight: 500;
+                    font-size: min(max(12px, 1vw), 17px);
+                    line-height: min(max(12px, 1vw), 17px);
+                }
+                .description {
+                    font-weight: 600;
+                    font-size: min(max(8px, 1vw), 10px);
+                    line-height: min(max(8px, 1vw), 10px);
+                    text-transform: capitalize;
+                    color: #bdd1c4;
+                }
+            }
+            .green-btn {
+                background: #1e252a;
+                color: #23b054;
+                box-shadow: -1.42308px 1.42308px 2.84615px rgba(12, 15, 17, 0.2),
+                    1.42308px -1.42308px 2.84615px rgba(12, 15, 17, 0.2),
+                    -1.42308px -1.42308px 2.84615px rgba(48, 59, 67, 0.9),
+                    1.42308px 1.42308px 4.26923px rgba(12, 15, 17, 0.9),
+                    inset 1.42308px 1.42308px 2.84615px rgba(48, 59, 67, 0.3),
+                    inset -1.42308px -1.42308px 2.84615px rgba(12, 15, 17, 0.5);
+                border: none;
+                .score {
+                    color: #22944c;
+                }
+                &.active {
+                    background: #1d2a1f;
+                    box-shadow: 1.25333px 1.25333px 2.50667px rgba(46, 67, 50, 0.3),
+                        -1.25333px -1.25333px 2.50667px rgba(12, 17, 12, 0.5),
+                        inset -1.25333px 1.25333px 2.50667px rgba(12, 17, 12, 0.2),
+                        inset 1.25333px -1.25333px 2.50667px rgba(12, 17, 12, 0.2),
+                        inset -1.25333px -1.25333px 2.50667px rgba(46, 67, 50, 0.9),
+                        inset 1.25333px 1.25333px 3.76px rgba(12, 17, 12, 0.9);
+                }
+            }
+            .pink-btn {
+                background: #1e252a;
+                color: #a954eb;
+                box-shadow: -1.42308px 1.42308px 2.84615px rgba(12, 15, 17, 0.2),
+                    1.42308px -1.42308px 2.84615px rgba(12, 15, 17, 0.2),
+                    -1.42308px -1.42308px 2.84615px rgba(48, 59, 67, 0.9),
+                    1.42308px 1.42308px 4.26923px rgba(12, 15, 17, 0.9),
+                    inset 1.42308px 1.42308px 2.84615px rgba(48, 59, 67, 0.3),
+                    inset -1.42308px -1.42308px 2.84615px rgba(12, 15, 17, 0.5);
+                border: none;
+                .score {
+                    color: #a954eb;
+                }
+                &.active {
+                    background: #390e5b;
+                    box-shadow: 1.25333px 1.25333px 2.50667px rgba(91, 22, 146, 0.3),
+                        -1.25333px -1.25333px 2.50667px rgba(23, 6, 36, 0.5),
+                        inset -1.25333px 1.25333px 2.50667px rgba(23, 6, 36, 0.2),
+                        inset 1.25333px -1.25333px 2.50667px rgba(23, 6, 36, 0.2),
+                        inset -1.25333px -1.25333px 2.50667px rgba(91, 22, 146, 0.9),
+                        inset 1.25333px 1.25333px 3.76px rgba(23, 6, 36, 0.9);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .card-details {
+            margin-left: 40px !important;
+        }
+    }
+    .card-action-icons {
+        .is-live {
+            width: 33px;
+            height: 20px;
+            background: linear-gradient(135deg, #1c2027 5.94%, #1e242b 100%);
+            box-shadow: -1px 1px 2px rgba(12, 14, 16, 0.2), 1px -1px 2px rgba(12, 14, 16, 0.2),
+                -1px -1px 2px rgba(46, 54, 66, 0.9), 1px 1px 3px rgba(12, 14, 16, 0.9),
+                inset 1px 1px 2px rgba(46, 54, 66, 0.3), inset -1px -1px 2px rgba(12, 14, 16, 0.5);
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 13px;
+            text-transform: capitalize;
+            color: #cf2121;
+        }
+        @media screen and (min-width: 573px) {
+            .is-live {
+                width: 29px !important;
+                height: 13px !important;
+            }
+        }
+        .actions {
+            width: 33px;
+            height: calc(100% - 20px);
+            .material-icons {
+                width: min(max(11px, 2vw), 25px);
+                height: min(max(11px, 2vw), 25px);
+                font-size: min(max(8px, 2vw), 20px);
+                margin: 4px 0px;
+                background-color: #166130;
+                border-radius: 50%;
+                color: #20232a;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &.active {
+                    color: #166130 !important;
+                    background-color: #20232a !important;
+                }
+            }
+        }
+    }
+}
+
+.green-btn:focus {
+    // background: red !important;
+}
+
+.cricket-card {
+    top: 0px;
+    &::before {
+        top: -10px;
+        left: -10px;
+    }
+    &::after {
+        top: -10px;
+        right: -10px;
+    }
+}
+
+.cricket-card.card-header:before,
+.cricket-card.card-header:after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    left: calc(min(max(60px, 3vw), 75px) - 15px);
+    background: #191c22;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.solid-green-btn {
+    background-color: #12691f !important;
+    box-shadow: -1px 1px 2px rgba(12, 14, 16, 0.2), 1px -1px 2px rgba(12, 14, 16, 0.2),
+        -1px -1px 2px rgba(46, 54, 66, 0.9), 1px 1px 3px rgba(12, 14, 16, 0.9), inset 1px 1px 2px rgba(46, 54, 66, 0.3),
+        inset -1px -1px 2px rgba(12, 14, 16, 0.5);
+    .score {
+        color: white !important;
+    }
+}
+
+.solid-green-btn:focus {
+    background-color: #12691f !important;
+    // background-color: #13541d !important;
+    box-shadow: 1px 1px 2px rgb(46 67 50 / 30%), -1px -1px 2px rgb(12 17 12 / 50%),
+        inset -1px 1px 2px rgb(12 17 12 / 20%), inset 1px -1px 2px rgb(12 17 12 / 20%),
+        inset -1px -1px 2px rgb(46 67 50 / 90%), inset 1px 1px 3px rgb(12 17 12 / 90%) !important;
+}
+
+.solid-purple-btn {
+    background-color: #57267c !important;
+    box-shadow: -1px 1px 2px rgba(12, 14, 16, 0.2), 1px -1px 2px rgba(12, 14, 16, 0.2),
+        -1px -1px 2px rgba(46, 54, 66, 0.9), 1px 1px 3px rgba(12, 14, 16, 0.9), inset 1px 1px 2px rgba(46, 54, 66, 0.3),
+        inset -1px -1px 2px rgba(12, 14, 16, 0.5);
+    .score {
+        color: white !important;
+    }
+}
+
+.solid-purple-btn:focus {
+    background-color: #57267c !important;
+    // background-color: #371b4d !important;
+    box-shadow: 1px 1px 2px rgb(46 67 50 / 30%), -1px -1px 2px rgb(12 17 12 / 50%),
+        inset -1px 1px 2px rgb(12 17 12 / 20%), inset 1px -1px 2px rgb(12 17 12 / 20%),
+        inset -1px -1px 2px rgb(46 67 50 / 90%), inset 1px 1px 3px rgb(12 17 12 / 90%) !important;
+}
+
+.purple-txt {
+    color: #a954eb !important;
+}
+
+@media screen and (max-width: 768px) {
+    .solid-purple-btn:focus {
+        background-color: #3b2050 !important;
+    }
+    .solid-green-btn:focus {
+        background-color: #13541d !important;
+    }
+}
+.w-92 {
+    width: 100%;
+}
+@media screen and (max-width: 767px) {
+    .w-92 {
+        width: 92% !important;
+    }
+}

@@ -1,0 +1,81 @@
+<app-header></app-header>
+<div class="sm-bottom-bar d-flex d-md-none">
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        (click)="onClickBottomMenu('/');betslips =false">
+        <img [src]="currentRoute === '/' ? activeBallIcon : ballIcon" alt="" />
+        <div>Sports</div>
+    </a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        (click)="onClickBottomMenu('/match/all');betslips =false">
+        <img [src]="currentRoute === '/match/all' ? activeBallIcon : ballIcon" alt="" />
+        <div>Match</div>
+    </a>
+
+    <a class="sm-nav-indicator"></a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center sm-current active"
+        (click)="betslips = !betslips; onClickBottomMenu(routerUrl)">
+        <img [src]="activeBallIcon" alt="" />
+        <div>Betslips</div>
+    </a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        (click)="onClickBottomMenu('/casino');betslips =false">
+        <img [src]="currentRoute === '/casino' ? activeBallIcon : ballIcon" alt="" />
+        <div>Casino</div>
+    </a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        (click)="onClickBottomMenu('/horse-betting');betslips =false">
+        <img [src]="currentRoute === '/horse-betting' ? activeBallIcon : ballIcon " alt="" />
+        <div>Fantasy</div>
+    </a>
+
+    <!-- <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        [ngClass]="{'sm-current active':( currentRoute === '/') && betslips == false}"
+        (click)="onClickBottomMenu('/');betslips =false">
+        <img src="/assets/images/basket-ball.svg" alt="" />
+        <div>Sports</div>
+    </a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        [ngClass]="{'sm-current active': (currentRoute === '/match/fancy') && betslips == false}"
+        (click)="onClickBottomMenu('/match/fancy');betslips =false">
+        <img src="/assets/images/basket-ball.svg" alt="" />
+        <div>Match</div>
+    </a>
+
+    <a class="sm-nav-indicator"></a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        [ngClass]="{'sm-current active': (currentRoute === '/casino' ) && betslips == false}"
+        (click)="onClickBottomMenu('/casino');betslips =false">
+        <img src="/assets/images/basket-ball.svg" alt="" />
+        <div>Casino</div>
+    </a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        [ngClass]="{'sm-current active': (currentRoute === '/horse-betting') && betslips == false}"
+        (click)="onClickBottomMenu('/horse-betting');betslips =false">
+        <img src="/assets/images/basket-ball.svg" alt="" />
+        <div>Horse</div>
+    </a>
+
+    <a class="sm-menu-item d-flex flex-column justify-content-center align-items-center"
+        [ngClass]="{'sm-current active': betslips === true}"
+        (click)="betslips = !betslips; onClickBottomMenu(routerUrl)">
+        <img src="/assets/images/basket-ball.svg" alt="" />
+        <div>Betslips</div>
+    </a>
+     -->
+</div>
+<div *ngIf="betslips" class="bestslip-wrapper-div" [ngClass]="{'active': betslips == true}">
+    <app-match-right-panel
+        *ngIf="(routerUrl =='/match/all') || (routerUrl =='/match/fancy') || (routerUrl =='/inplay/all') || (routerUrl=='/deposit/all') || (routerUrl=='/deposit/cryptopay') || (routerUrl=='/deposit/phonepay')">
+    </app-match-right-panel>
+    <app-horse-betting-right-panel *ngIf="(routerUrl =='/horse-betting/all') || (routerUrl=='horse-betting/match')">
+    </app-horse-betting-right-panel>
+    <app-promotion-right-panel *ngIf="(routerUrl =='/promotion/all')"></app-promotion-right-panel>
+    <app-dashboard-right-panel *ngIf="(routerUrl =='/favorites/all') || (routerUrl=='/')"></app-dashboard-right-panel>
+</div>

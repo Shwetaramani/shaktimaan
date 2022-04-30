@@ -1,0 +1,1400 @@
+<div class="horse-betting d-flex w-100">
+    <div class="left-panel">
+        <div class="carousel-and-actions">
+            <app-main-container-carousel [slides]="slides"></app-main-container-carousel>
+
+            <div class="carousel-actions d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex w-100 title">
+                    Terang (aus) 1st Nov
+                </div>
+
+                <div class="d-flex w-100 description">
+                    R8 2180m Pace M
+                </div>
+            </div>
+        </div>
+
+        <app-sub-nav [tabs]="subNavTabs" [isCondition]="false"></app-sub-nav>
+
+
+
+        <div class="cricket-card d-flex flex-row justify-content-between align-items-center w-92 mx-auto">
+            <div class="card-header d-flex flex-column justify-content-center align-items-center">
+                <div class="header">
+                    R2 1609M PACE M
+                </div>
+
+               <!--  <span class="material-icons close-icon d-flex justify-content-center align-items-center"
+                    (click)="onCloseCard()">close</span> -->
+
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <!-- <div class="card-action-icons d-block d-sm-none">
+                        <ng-container *ngTemplateOutlet="cardActionIconsTemplate"></ng-container>
+                    </div> -->
+
+                    <!-- <div class="details d-flex flex-column justify-content-center align-items-center">
+                        <div class="description">Cashout</div>
+                        <div class="rate">₹100</div>
+                        <div class="rate-green">p- ₹100</div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="card-details d-flex justify-content-start align-items-center w-100">
+
+
+                <div class="action-btns d-flex justify-content-center align-items-center w-100 noselect"
+                    [collapse]="!isCollapsed">
+                    <div class="teams d-flex flex-column justify-content-between align-items-start w-100">
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100 ">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">07</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mr-5"> </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal2()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </nav>
+
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollapsed">
+                                <div class="mt-4 mb-4">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped2">
+                                <div class="mt-4 mb-4">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">07</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal3()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal4()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollasped3">
+                                <div class="mt-4 mb-4">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped4">
+                                <div class="mt-4 mb-4">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100 ">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">02</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal5()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal6()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollasped5">
+                                <div class="mt-4 mb-4">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped6">
+                                <div class="mt-4 mb-4">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- extra row code started  -->
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100 ">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">02</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mr-5"> </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal7()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal8()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </nav>
+
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollasped7">
+                                <div class="mt-4 mb-4">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped8">
+                                <div class="mt-4 mb-4">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">05</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal9()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal10()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollasped9">
+                                <div class="mt-4 mb-4">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped10">
+                                <div class="mt-4 mb-4">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100 ">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">05</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal11()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal12()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollasped11">
+                                <div class="mt-4 mb-4">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped12">
+                                <div class="mt-4 mb-4">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100 ">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">05</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal13()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal14()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div [collapse]="!isCollasped13" >
+                                <div class="mt-4 mb-4 socre-modal-wrapper">
+                                    <app-match-score-modal></app-match-score-modal>
+                                </div>
+                            </div>
+                            <div [collapse]="!isCollasped14">
+                                <div class="mt-4 mb-4 socre-modal-wrapper">
+                                    <app-lay-score-modal></app-lay-score-modal>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-lg-row justify-content-start align-items-center team w-100">
+                            <nav class="navbar navbar-expand-lg w-100 ">
+
+                                <div class="container-fluid pe-0 pe-md-2">
+                                    <div class="d-flex">
+                                        <div class="circle">
+                                            KKR
+                                            <!-- <img src="../../../assets/images/kkr.png" alt=""> -->
+                                        </div>
+                                        <div class="team-title">
+
+
+                                            <div class="d-flex justify-content-center align-items-center  ">
+                                                <div class="name  ms-3 ">
+                                                    <div class="d-lg-block score positive">Webill Richardson</div>
+                                                    <div class="d-lg-block">Tom Jerry</div>
+                                                </div>
+                                                <div class="score positive ms-4"> <span class="">05</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex ">
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                        <button
+                                            class="green-btn solid-green-btn d-flex flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal15()">
+                                            <div class="score">0065</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+
+                                        <button
+                                            class="pink-btn d-flex solid-purple-btn flex-column justify-content-center align-items-center"
+                                            (click)="openMatchScoreModal16()">
+                                            <div class="score">1.65</div>
+                                            <div class="description">20,00,000</div>
+                                        </button>
+                                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                            <button
+                                                class="green-btn d-flex flex-column justify-content-center align-items-center" disabled>
+                                                <div class="score purple-txt">1.65</div>
+                                                <div class="description">52,016</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div class="container d-flex align-items-center justify-content-center">
+                                <div [collapse]="!isCollasped15" >
+                                    <div class="mt-4 mb-4 socre-modal-wrapper">
+                                        <app-match-score-modal></app-match-score-modal>
+                                    </div>
+                                </div>
+                                <div [collapse]="!isCollasped16">
+                                    <div class="mt-4 mb-4 socre-modal-wrapper">
+                                        <app-lay-score-modal></app-lay-score-modal>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="d-flex justify-content-center flex-wrap pb-5 mt-5 position-relative">
+            <div class="header">
+                <div class="heder-bg">
+                    <h4>R2 1609M PACE M</h4>
+                </div>
+            </div>
+            <div class="cricket-card d-flex flex-row justify-content-start align-items-center ">
+                <div class="card-header d-flex flex-column justify-content-center align-items-center">
+                </div>
+
+                <div class="card-details d-flex justify-content-start align-items-center">
+
+
+                    <div class="action-btns d-flex justify-content-center align-items-center w-100 noselect">
+                        <div class="teams d-flex flex-column justify-content-between align-items-start"
+                            style="width: fit-content;">
+
+                            <div class="row px-0 py-5 m-0 d-flex overflow-hidden">
+                                <div class="col-6 col-lg-3 px-0 d-block  mb-4 card-wrapper">
+                                    <div class=" team w-100 ps-4 pe-2">
+                                        <nav class ="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal2()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollapsed && !isCollasped2"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollapsed && !isCollasped2"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mr-5"> </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollapsed" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped2">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" team w-100 pt-4 ps-4 pe-2"> 
+                                        <nav class="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal3()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal4()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped3 && !isCollasped4"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped3 && !isCollasped4"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mr-5"> </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped3" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped4">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3 px-0 d-block  mb-4 card-wrapper">
+                                    <div class=" team w-100 ps-4 pe-2">
+                                        <nav class ="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal5()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal6()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped5 && !isCollasped6"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped5 && !isCollasped6"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mr-5"> </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped5" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped6">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" team w-100 pt-4 ps-4 pe-2"> 
+                                        <nav class="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal7()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal8()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped7 && !isCollasped8"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped7 && !isCollasped8"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mr-5"> </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped7" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped8">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3 px-0 d-block  mb-4 card-wrapper">
+                                    <div class=" team w-100 ps-4 pe-2">
+                                        <nav class="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal9()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal10()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped9 && !isCollasped10"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped9 && !isCollasped10"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mr-5"> </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped9" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped10">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" team w-100 pt-4 ps-4 pe-2"> 
+                                        <nav class="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal11()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal12()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped11 && !isCollasped12"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped11 && !isCollasped12"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mr-5"> </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped11" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped12">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3 px-0 d-block mb-4 card-wrapper">
+                                    <div class=" team w-100 ps-4 pe-2">
+                                        <nav class ="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal13()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal14()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped13 && !isCollasped14"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped13 && !isCollasped14"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mr-5"> </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped13" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped14">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" team w-100 pt-4 ps-4 pe-2"> 
+                                        <nav class="navbar navbar-expand-lg w-100">
+                                            <div class="d-flex">
+                                                <div class="d-block">
+                                                    <div class="circle mb-3">
+                                                        KKR
+                                                    </div>
+                                                    <div class="d-block text-center">
+
+                                                        <div class="score positive sub-title">01</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-block px-3">
+                                                    <div class="mb-3">
+                                                        <div
+                                                            class=" justify-content-center align-items-center text-center ">
+                                                            <div class="name ">
+                                                                <div class="score positive main-title">Webill Richardson
+
+                                                                </div>
+                                                                <div class="sub-title">Tom Jerry</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <button class="green-btn solid-green-btn align-items-center"
+                                                            (click)="openMatchScoreModal15()">
+                                                            <div class="score">0065</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+
+                                                        <button class="pink-btn solid-purple-btn align-items-center"
+                                                            (click)="openMatchScoreModal16()">
+                                                            <div class="score">1.65</div>
+                                                            <div class="description">552215</div>
+                                                        </button>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex navbar-collapse">
+                                                            <button *ngIf="!isCollasped15 && !isCollasped16"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                            <button *ngIf="!isCollasped15 && !isCollasped16"
+                                                                class="green-btn d-flex flex-column justify-content-center align-items-center">
+                                                                <div class="score purple-txt">1.65</div>
+                                                                <div class="description">552215</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mr-5"> </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="container d-flex align-items-center justify-content-center">
+                                        <div [collapse]="!isCollasped15" >
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-match-score-modal></app-match-score-modal>
+                                            </div>
+                                        </div>
+                                        <div [collapse]="!isCollasped16">
+                                            <div class="mt-4 mb-4 socre-modal-wrapper">
+                                                <app-lay-score-modal></app-lay-score-modal>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <app-footer></app-footer>
+    </div>
+    <div class="right-panel d-none d-md-block">
+        <app-horse-betting-right-panel></app-horse-betting-right-panel>
+    </div>
+
+</div>

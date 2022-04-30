@@ -1,0 +1,88 @@
+<div class="modal-body scooped-corners">
+    <div class="inner-body inner-scooped-corners">
+        <div class="header">
+            <div class="heder-bg">
+                <h4>One Click Bet</h4>
+            </div>
+        </div>
+        <div class="content">
+            <div class="col-12 mb-4 ">
+                <div class="d-flex justify-content-center">
+                    <div class="score green-txt me-4 white-txt">ONE CLICK BET</div>
+                    <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
+                </div>
+
+                <div class="row align-items-center modal_wrapper pt-4">
+                    <div class="col-lg-6 col-12 d-flex justify-content-center px-0">
+                        <div class="d-block text-center">
+                            <div class="d-block">
+                                <input class="custom-radio" type="radio" name="selected_bet">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="material-icons " (click)="increment('number1')"
+                                    [disabled]='isChecked==false'>add</button>
+                                <input class="score green-txt count-input" [(ngModel)]="number1" type="number"
+                                    [disabled]='isChecked==false'>
+                                <button class="material-icons" (click)="decrement('number1')"
+                                    [disabled]='isChecked==false'>remove</button>
+                            </div>
+                        </div>
+                        <div class="d-block text-center">
+                            <div class="d-block">
+                                <input class="custom-radio" type="radio" name="selected_bet">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="material-icons " (click)="increment('number2')"
+                                    [disabled]='isChecked==false'>add</button>
+                                <input class="score green-txt count-input" [(ngModel)]="number2" type="number"
+                                    [disabled]='isChecked==false'>
+                                <button class="material-icons" (click)="decrement('number2')"
+                                    [disabled]='isChecked==false'>remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 d-flex justify-content-center px-0">
+                        <div class="d-block text-center">
+                            <div class="d-block">
+                                <input class="custom-radio" type="radio" name="selected_bet">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="material-icons " (click)="increment('number3')"
+                                    [disabled]='isChecked==false'>add</button>
+                                <input class="score green-txt count-input" [(ngModel)]="number3" type="number"
+                                    [disabled]='isChecked==false'>
+                                <button class="material-icons" (click)="decrement('number3')"
+                                    [disabled]='isChecked==false'>remove</button>
+                            </div>
+                        </div>
+                        <div class="d-block text-center">
+                            <div class="d-block">
+                                <input class="custom-radio" type="radio" name="selected_bet">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button class="material-icons " (click)="increment('number4')"
+                                    [disabled]='isChecked==false'>add</button>
+                                <input class="score green-txt count-input" [(ngModel)]="number4" type="number"
+                                    [disabled]='isChecked==false'>
+                                <button class="material-icons" (click)="decrement('number4')"
+                                    [disabled]='isChecked==false'>remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center pt-4" *ngIf="enableInput">
+                        <input class="score green-txt count-input" [(ngModel)]="number5" type="number"
+                            [disabled]='isChecked==false'>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="button" *ngIf="isChecked && !enableInput" class="btn dark-btn me-4 mt-4"
+                    (click)="enableInput = true">Add Custom Stack</button>
+                <button type="button" class="btn dark-btn me-4 mt-4" (click)="activeModal.dismiss()">Save</button>
+                <button type="button" class="btn dark-btn mt-4" (click)="activeModal.dismiss()">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

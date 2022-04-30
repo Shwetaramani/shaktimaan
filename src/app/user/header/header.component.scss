@@ -1,0 +1,111 @@
+#layoutSidenav {
+  background-color: transparent;
+}
+/* @media screen and (min-width: 768px) { */
+::ng-deep.mat-expansion-panel {
+  box-shadow: unset !important;
+}
+
+::ng-deep.mat-expansion-panel-header {
+  height: fit-content !important;
+}
+
+::ng-deep.mat-expansion-panel-header {
+  padding: 0 2px 0 0 !important;
+  /* padding-right: 2px !important; */
+}
+
+::ng-deep.mat-expansion-panel-body {
+  color: #c7c7c7 !important;
+  padding-right: 0px !important;
+  padding-bottom: 0px !important;
+  /* margin-left: 65px !important; */
+  margin-left: 32px !important;
+}
+
+::ng-deep.mat-expansion-panel-header:hover {
+  background-color: transparent !important;
+}
+
+::ng-deep.mat-expansion-indicator::after {
+  color: #c7c7c7 !important;
+}
+/* } */
+.active {
+  .img-container {
+    background: #1d2229;
+    box-shadow: 1px 1px 2px rgb(46 54 66 / 30%), -1px -1px 2px rgb(12 14 16 / 50%),
+      inset -2px 2px 2px rgb(12 14 16 / 20%), inset 2px -2px 2px rgb(12 14 16 / 20%),
+      inset -2px -2px 2px rgb(46 54 66 / 90%), inset 2px 2px 3px rgb(12 14 16 / 90%) !important;
+  }
+}
+
+.active.img-container {
+    background: #1d2229;
+    box-shadow: 1px 1px 2px rgb(46 54 66 / 30%), -1px -1px 2px rgb(12 14 16 / 50%),
+      inset -2px 2px 2px rgb(12 14 16 / 20%), inset 2px -2px 2px rgb(12 14 16 / 20%),
+      inset -2px -2px 2px rgb(46 54 66 / 90%), inset 2px 2px 3px rgb(12 14 16 / 90%) !important;
+  }
+
+.img-container {
+  width: min(max(36px, 3vw), 68px);
+  max-width: min(max(36px, 3vw), 68px);
+  height: min(max(36px, 3vw), 68px);
+  max-height: min(max(36px, 3vw), 68px);
+  background: linear-gradient(135deg, #1c2027 0%, #1e242b 100%);
+  box-shadow: -1px 1px 2px rgba(12, 14, 16, 0.2), 1px -1px 2px rgba(12, 14, 16, 0.2),
+    -1px -1px 2px rgba(46, 54, 66, 0.9), 1px 1px 3px rgba(12, 14, 16, 0.9), inset 1px 1px 2px rgba(46, 54, 66, 0.3),
+    inset -1px -1px 2px rgba(12, 14, 16, 0.5);
+  border-radius: 5px;
+  border-radius: 5px;
+
+  img {
+    width: min(max(18px, 1vw), 28px);
+    height: min(max(18px, 1vw), 28px);
+  }
+}
+.casino-icon img{
+  width: min(max(18px, 3vw), 34px) !important;
+    height: min(max(18px, 3vw), 34px) !important;
+}
+.menus {
+  margin-top: 8px;
+
+  .sub-title {
+    margin-bottom: 4px;
+  }
+
+  .list {
+    position: relative;
+    font-size: 12px;
+    color: #23b054;
+    padding-left: 5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #004c00;
+    }
+
+    p {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.active.menu-btn{
+  box-shadow: 1px 1px 2px rgb(38 42 51 / 30%), -1px -1px 2px rgb(12 14 17 / 50%), inset -3px 3px 6px rgb(12 14 17 / 20%), inset 3px -3px 6px rgb(12 14 17 / 20%), inset -3px -3px 6px rgb(38 42 51 / 90%), inset 3px 3px 8px rgb(12 14 17 / 90%) !important;
+
+}
+
+.app_logo{
+  height: 68px;
+}
+
+.title.active{
+  color: #22b455;
+}

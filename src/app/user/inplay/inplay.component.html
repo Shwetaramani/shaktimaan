@@ -1,0 +1,129 @@
+<div class="match d-flex w-100">
+    <div class="left-panel">
+        <div class="carousel-and-actions">
+            <app-main-container-carousel [slides]="slides"></app-main-container-carousel>
+
+            <div class="carousel-actions d-flex flex-column justify-content-start align-items-center">
+                <div class="d-flex justify-content-between w-100 p-2 pb-0">
+                    <div class="d-flex justify-content-start w-25">
+                        <div class="action-btn" (click)="playVideo = true; showVideo()">
+                            <span class="material-icons">computer</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+
+                        <div class="d-flex justify-content-center align-items-center pt-2 w-100 counter">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[0]}}</div>
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[1]}}</div>
+                                    <div class="divider">:</div>
+                                </div>
+                                <div class="type">Day</div>
+                            </div>
+        
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[2]}}</div>
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[3]}}</div>
+                                    <div class="divider">:</div>
+                                </div>
+                                <div class="type">Hours</div>
+                            </div>
+        
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[4]}}</div>
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[5]}}</div>
+                                    <div class="divider">:</div>
+                                </div>
+                                <div class="type">Minutes</div>
+                            </div>
+        
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[6]}}</div>
+                                    <div class="count d-flex justify-content-center align-items-center">{{counter[7]}}</div>
+                                </div>
+                                <div class="type">Second</div>
+                            </div>
+                        </div>
+                        <div class="w-100 text-center">world Cup 2022</div>
+                        <span class="w-100 text-center">THU</span>
+                    </div>
+
+                    <div class="d-flex justify-content-end  w-25">
+                        <div class="action-btn">
+                            <span class="material-icons">add_circle_outline</span>
+                        </div>
+
+                        <div class="action-btn ms-2">
+                            <span class="material-icons">insights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center w-100 px-2 vs-match">
+                    <div class="team-btn d-flex justify-content-end align-items-center w-50 pe-4">
+
+
+                        <div class="circle">
+                            KKR
+                        </div>
+                        <div class="d-none d-md-block">KOLKATA KNIGHT RIDERS</div>
+                        <div class="d-block d-md-none">KKR</div>
+                    </div>
+
+                    <div class="d-flex flex-column justify-content-center align-items-center vs">
+                        VS
+                    </div>
+
+                    <div class="team-btn d-flex justify-content-start align-items-center w-50 ps-4">
+                        <div class="d-none d-md-block">DELHI CAPITALS</div>
+                        <div class="d-block d-md-none">DC</div>
+                        <div class="circle">
+                            DC
+                        </div>
+
+
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <app-sub-nav [tabs]="subNavTabs" [isCondition]="false"></app-sub-nav>
+
+        <div class="d-flex flex-column justify-content-center align-items-center mt-2 pb-5">
+            <div class="d-flex flex-column justify-content-center align-items-center"
+                *ngFor="let item of items; let i=index;">
+                <app-cricket-card [isLive]="item" *ngIf="item !== 'delete'" (onMatchBidClick)="selectIndex = i"
+                    (onClose)="deleteCard(i)"></app-cricket-card>
+
+                <!-- <div *ngIf="selectIndex === i" class="mt-4 mb-5" >
+                    <app-match-score-modal (onClose)="selectIndex = null" ></app-match-score-modal>
+                </div> -->
+            </div>
+        </div>
+        <!-- <video id="player" playsinline controls data-poster="/path/to/poster.jpg" style="width: 250px;">
+            <source src="../../../assets/images/video.mp4" type="video/mp4" />
+    
+            <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
+        </video> -->
+        <video #videoElement controls="true" style="height: 1px; width: 1px; visibility: hidden;"
+            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"> </video>
+
+        <app-footer></app-footer>
+    </div>
+
+    <div class="right-panel d-none d-md-block">
+        <app-match-right-panel></app-match-right-panel>
+    </div>
+
+    <!--  <audio id="player" controls>
+        <source src="/path/to/audio.mp3" type="audio/mp3" />
+        <source src="/path/to/audio.ogg" type="audio/ogg" />
+    </audio> -->
+</div>

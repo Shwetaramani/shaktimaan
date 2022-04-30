@@ -1,0 +1,147 @@
+<div class="dashboard d-flex w-100">
+    <div class="left-panel">
+        <div class="carousel-and-tabs">
+            <!-- <app-main-container-carousel [slides]="slides"></app-main-container-carousel> -->
+
+            <div class="owl-carousel-casino overflow-hidden" >
+                <img [src]="slide" class="slider-img" alt="">
+          </div>  
+            <div class="carousel-tabs">
+                <div class="tab" (click)="activeSlide(0)">
+                    <div class="area">
+                        <div class="title">Free Bet Club</div>
+                        <div class="description">Free Bet Club</div>
+                    </div>
+                </div>
+
+                <div class="tab" (click)="activeSlide(1)">
+                    <div class="area">
+                        <div class="title">Free Bet Club</div>
+                        <div class="description">Free Bet Club</div>
+                    </div>
+                </div>
+
+                <div class="tab" (click)="activeSlide(2)">
+                    <div class="area">
+                        <div class="title">Free Bet Club</div>
+                        <div class="description">Free Bet Club</div>
+                    </div>
+                </div>
+
+                <div class="tab" (click)="activeSlide(3)">
+                    <div class="area">
+                        <div class="title">Free Bet Club</div>
+                        <div class="description">Free Bet Club</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex d-md-none carousel-cards w-100 mb-3">
+            <owl-carousel-o [options]="carouselSlideOptions" class="owl-carousel-score-cards w-100">
+                <ng-template carouselSlide>
+                    <app-score-card></app-score-card>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <app-score-card></app-score-card>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <app-score-card></app-score-card>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <app-score-card></app-score-card>
+                </ng-template>
+
+                <ng-template carouselSlide>
+                    <app-score-card></app-score-card>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+
+        <app-sub-nav [tabs]="subNavTabs" [isCondition]="false"></app-sub-nav>
+
+        <div class="d-none d-md-flex justify-content-evenly flex-wrap mt-2 pb-5 match-cards">
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+            <app-match-card class="mx-2"></app-match-card>
+        </div>
+
+        <div class="d-flex d-md-none mt-2 carousel-cards w-100">
+            <owl-carousel-o [options]="CardcarouselSlideOptions" class="owl-carousel-score-cards w-100"
+                style="z-index: 1;">
+                <ng-template carouselSlide>
+                    <app-match-card></app-match-card>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <app-match-card></app-match-card>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <app-match-card></app-match-card>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <app-match-card></app-match-card>
+                </ng-template>
+                <!--<div class="carousel-cell w-100">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>            
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>            
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>            
+                <div class="carousel-cell">
+                    <app-match-card></app-match-card>
+                </div>-->
+            </owl-carousel-o>
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+    <div class="right-panel d-none d-md-block" >
+        <app-dashboard-right-panel></app-dashboard-right-panel>
+    </div>
+</div>

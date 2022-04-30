@@ -1,0 +1,288 @@
+.home-banner .super-league .footer-area {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-banner .super-league .footer-area p {
+    color: #9f9f9f;
+    width: 65%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+.home-banner .super-league .footer-area button {
+    width: 30%;
+    max-width: 100%;
+    padding: 5px 10px;
+}
+.nex-match .card-footer {
+    background: #2e3138;
+}
+.nex-match .card-footer h5 {
+    color: #e5e5e5;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.nex-match .card-footer p {
+    color: #23b054;
+    margin-bottom: 0;
+}
+.footer .links h6 {
+    font-family: Rajdhani;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #f1f1f1;
+}
+.footer .links {
+    margin: 40px 0 40px 0;
+}
+.footer .links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.footer .links ul li a {
+    font-family: Rajdhani;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 141.6%;
+    text-transform: capitalize;
+    color: #a6a6a6;
+}
+.footer .about-sahktimaan h1 {
+    font-family: Rajdhani;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 43.1692px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #cde9d6;
+}
+.footer .about-sahktimaan h1 span {
+    color: #22b455;
+}
+.footer .about-sahktimaan p {
+    font-family: Rajdhani;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5232px;
+    line-height: 18px;
+    color: #a6a6a6;
+}
+.footer .about-sahktimaan .social-icons .box {
+    width: 40px;
+    height: 40px;
+    background: #1a1d24;
+    box-shadow: -5px 5px 10px rgba(10, 12, 14, 0.2), 5px -5px 10px rgba(10, 12, 14, 0.2),
+        -5px -5px 10px rgba(42, 46, 58, 0.9), 5px 5px 13px rgba(10, 12, 14, 0.9),
+        inset 1px 1px 2px rgba(42, 46, 58, 0.3), inset -1px -1px 2px rgba(10, 12, 14, 0.5);
+    border-radius: 36.5px;
+    position: relative;
+    text-align: center;
+}
+.footer .about-sahktimaan .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.footer .about-sahktimaan .social-icons a {
+    margin-right: 28px;
+}
+.footer .about-sahktimaan .social-icons .box img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 24px;
+}
+
+.footer .language {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #a6a6a6;
+}
+.footer .language span {
+    margin-right: 10px;
+}
+.text-gray {
+    color: #a6a6a6 !important;
+}
+.footer .payment-opction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer .payment-opction div {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.footer .bootom-link a {
+    color: #a6a6a6 !important;
+    position: relative;
+    padding: 0 10px;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+.footer .bootom-link a:after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 1px;
+    top: 4px;
+    background-color: #a6a6a6;
+    right: 0;
+}
+
+.green-txt {
+    color: #22b455;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.expansion-header {
+    background: #1e2128;
+    box-shadow: -3px 3px 6px rgba(15, 17, 20, 0.2), 3px -3px 6px rgba(15, 17, 20, 0.2),
+        -3px -3px 6px rgba(45, 49, 60, 0.9), 3px 3px 8px rgba(15, 17, 20, 0.9), inset 1px 1px 2px rgba(45, 49, 60, 0.3),
+        inset -1px -1px 2px rgba(15, 17, 20, 0.5);
+    padding: 15px !important;
+}
+
+::ng-deep footer .mat-expansion-panel:last-of-type {
+    background: #1e2128 !important;
+}
+
+::ng-deep footer .mat-expansion-panel-header-title {
+    color: #ffffff !important;
+}
+h2 {
+    font-weight: 500 !important;
+    font-family: "Rajdhani", sans-serif !important;
+    margin-bottom: 0px !important;
+
+    span {
+        color: #22b455;
+    }
+}
+::ng-deep footer .mat-expansion-indicator::after {
+    color: #22b455 !important;
+}
+
+::ng-deep footer .mat-expansion-panel-content {
+    // padding: 25px 0px !important;
+    margin: 5px 0px 0px 0px !important;
+    border: 1px solid #686464 !important;
+    border-radius: 5px !important;
+    max-height: 250px;
+    overflow-y: scroll !important;
+}
+
+::ng-deep footer ::-webkit-scrollbar {
+    margin-right: 20px !important;
+    width: 4px !important;
+    overflow-y: scroll !important;
+    background: #636262 !important;
+    box-shadow: inset 0 0 4px !important;
+}
+
+::ng-deep footer ::-webkit-scrollbar-thumb {
+    margin-right: 20px !important;
+    background: #0a7418 !important;
+    border-radius: 10px !important;
+}
+
+.marquee {
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scrolling 8s linear infinite;
+}
+
+.marquee-item {
+    // flex: 0 0 16vw;
+    flex: 0 0 20vw;
+    margin: 0 10px;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
+}
+
+@media screen and (max-width: 600px) {
+    .marquee-item {
+        flex: 0 0 32vw;
+        margin: 0 10px;
+        /*   flex: 0 0 20vw; */
+        /*   margin: 0 2vw; */
+    }
+}
+
+.marquee-item img {
+    display: block;
+    width: 100%;
+    /*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translatex(-144vw);
+    }
+}
+
+.partner h1 {
+    font-family: Rajdhani;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+.partner h1 span {
+    color: #22b455;
+}
+.partner .single-logo {
+    background-image: url("../../../assets/images/Rectangle 39803.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    position: relative;
+}
+.partner .single-logo img {
+    display: block;
+
+    width: 50% !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.partner .owl-dots {
+    display: none;
+}
+button:focus {
+    outline: 1px dotted;
+    outline: none !important;
+}
+
+.partener-txt {
+    font-size: 30px;
+}

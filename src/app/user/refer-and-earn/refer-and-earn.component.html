@@ -1,0 +1,47 @@
+<div class="dashboard d-flex w-100">
+    <div class="left-panel">
+        <div class="carousel-and-actions">
+            <app-main-container-carousel [slides]="slides"></app-main-container-carousel>
+        </div>
+
+        <app-sub-nav [tabs]="subNavTabs" [isCondition]="false"></app-sub-nav>
+
+        <div class="d-flex justify-content-center flex-wrap mt-2 pb-5">
+            <div class="row px-0 mx-0">
+                <!-- <div class="col-12 px-3 py-4 px-lg-2 mx-0">
+                    <h1 class="about_h1">Refer & Earn</h1>
+                </div> -->
+                <div class="col-12 pt-4 px-3 px-lg-2 mx-0">
+                    <p class="about_img_inner"> <img src="../../../assets/images/Bring-friends.jpg" class="w-100 pb-4">
+                    </p>
+                </div>
+                <!-- <div class="col-12 px-3 px-lg-2 mx-0">
+                    <img src="../../../assets/images/refer_and_earn_step.png" class="w-100 py-4">
+
+                </div> -->
+
+                <div class="col-12 px-3 px-lg-2 mx-0">
+                    <p class="m-t-30"> <strong>Hey!</strong> <br>
+                        Bring your friends to Shaktimaan and get rewarded up to <b>₹15000</b>, for every friend. Once
+                        your
+                        friend becomes part of our rummy universe, make a minimum addition of <b>₹100</b> and starts
+                        playing, you can get a reward of up to <b>₹15000</b>. Please <a target="blank" href="#"> click
+                            here</a> to know more.
+                    </p>
+                    <p><span>Note:</span> Please ensure that your friends click on the referral link
+                        or use your referral code on signup to get rewarded. </p>
+                    <div class=" text-center">
+                        <button class="sm-btn my-3"> Download Shaktimaan Games</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+    <div class="right-panel d-none d-md-block">
+        <app-promotion-right-panel></app-promotion-right-panel>
+    </div>
+</div>
